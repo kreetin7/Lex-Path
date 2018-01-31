@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Lex's Path (1)",
+"dataUrl": "LPBuild1_Data.data.unityweb",
+"asmCodeUrl": "LPBuild1_Data.asm.code.unityweb",
+"asmMemoryUrl": "LPBuild1_Data.asm.memory.unityweb",
+"asmFrameworkUrl": "LPBuild1_Data.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
