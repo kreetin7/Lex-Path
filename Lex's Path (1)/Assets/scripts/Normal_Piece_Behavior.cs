@@ -39,7 +39,7 @@ public class Normal_Piece_Behavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
 
         if (dragging)
         {
@@ -49,27 +49,7 @@ public class Normal_Piece_Behavior : MonoBehaviour
         }
 
     }
-   /* void OnCollisionEnter2D (Collision2D collision)
-    {
-
-
-        if (collision.gameObject.tag.Equals("Wall"))
-        {
-
-            Destroy(this.gameObject);
-        }
-        */
-        /*
-        void OnMouseDrag()
-        {
-            point.y = gameObject.transform.position.y;
-
-
-            Debug.Log("Drag");
-
-
-        }
-        */
+ 
 
 
 
