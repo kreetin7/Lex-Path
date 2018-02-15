@@ -15,6 +15,16 @@ public class LevelManager: MonoBehaviour {
 		
 	}
 
+    public void GotoLevelSelect()
+    {
+        SceneManager.LoadScene("Load Screen");
+    }
+
+    public void GotoStart()
+    {
+        SceneManager.LoadScene("Start Screen");
+    }
+
     public void GotoLevel1()
     {
         SceneManager.LoadScene("Level1");
