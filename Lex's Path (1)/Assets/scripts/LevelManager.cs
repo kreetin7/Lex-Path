@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager: MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -32,7 +32,7 @@ public class LevelManager: MonoBehaviour {
 
     public void GotoLevel2()
     {
-        SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level2");
     }
 
     public void GotoLevel3()
@@ -58,5 +58,20 @@ public class LevelManager: MonoBehaviour {
     public void GotoLevel7()
     {
         SceneManager.LoadScene("Level7");
+    }
+
+    public void GotoLevel8()
+    {
+        SceneManager.LoadScene("Level8");
+    }
+
+    public void GotoLevel9 ()
+    {
+        SceneManager.LoadScene("Level9");
+    }
+
+    public void GotoLevel10 ()
+    {
+        SceneManager.LoadScene("Level10");
     }
 }

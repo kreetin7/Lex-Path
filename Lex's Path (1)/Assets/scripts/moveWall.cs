@@ -19,16 +19,7 @@ public class moveWall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*if (this.GetComponent<Transform>().position.y > 10) {
-                    transform.position += new Vector3(0f, -1.0f, 0f);
-                }
-
-                if (this.GetComponent<Transform>().position.x < -10)
-                {
-                    transform.position += new Vector3(0f, 1.0f, 0f); 
-                }
-                */
-        // transform.position = new Vector3(Mathf.PingPong(Time.time, 3), transform.position.y, transform.position.z);
+       
 
         if (Vector2.Distance(transform.position, new Vector2(xtarget, transform.position.y)) <= 0.01f)
         {

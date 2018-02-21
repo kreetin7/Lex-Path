@@ -935,11 +935,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0.9
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 5809517252618854ebd23ec36a7dd565, type: 2}
+  m_Mass: 9
+  m_LinearDrag: 1.85
+  m_AngularDrag: 0.66
+  m_GravityScale: 2
+  m_Material: {fileID: 6200000, guid: 6b2396f20147cd546a20efd5bff44c74, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -970,7 +970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554ae2d6ba7f0234a84ebe9abc576e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charcollider: {fileID: 0}
 --- !u!212 &1236892379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1233,7 +1232,7 @@ GameObject:
   - component: {fileID: 2095893444}
   m_Layer: 0
   m_Name: end spot (1)
-  m_TagString: Goal2
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

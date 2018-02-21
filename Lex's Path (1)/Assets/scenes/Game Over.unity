@@ -550,7 +550,6 @@ GameObject:
   - component: {fileID: 1971364421}
   - component: {fileID: 1971364420}
   - component: {fileID: 1971364419}
-  - component: {fileID: 1971364418}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -577,17 +576,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.8293152, y: -36}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1971364418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1971364416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e255e13424bc9f543b22df38d08e45b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1971364419
 MonoBehaviour:
   m_ObjectHideFlags: 0

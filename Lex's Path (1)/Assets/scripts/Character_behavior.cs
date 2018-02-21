@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Character_behavior : MonoBehaviour {
-
-    float moveSpeed = 0.5f;
-    public CircleCollider2D charcollider;
-
+  
+    float moveSpeed = 4.0f;
+    //public bool UnlockLevel2; 
    
 
 
 	// Use this for initialization
 	void Start () {
+        // UnlockLevel2 = false; 
         
 	}
 	
@@ -27,14 +27,26 @@ public class Character_behavior : MonoBehaviour {
 
             SceneManager.LoadScene("Game Over");
         }
+
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Goal7")
+
+        if (collision.gameObject.tag == "Goal")
         {
-            Invoke("LoadWinScene", 1.0f);
+            GameManager.CurrentLevel++;
+            Debug.Log("Current Level" + GameManager.CurrentLevel);
+            Debug.Log("here");
+            SceneManager.LoadScene("Level" + GameManager.CurrentLevel);
+            
         }
+        /*if (collision.gameObject.tag == "Goal7")
+        {
+            Invoke("LoadWinScene", 1.5f);
+            
+                }
         if (collision.gameObject.tag == "Goal3")
         {
             Invoke("Loadlvl4", 1.0f);
@@ -42,38 +54,41 @@ public class Character_behavior : MonoBehaviour {
 
         if (collision.gameObject.tag == "Goal1")
         {
-            Invoke("LoadLvl2", 1.0f);
+           // Level2 = true; 
+            Invoke("LoadLvl2", 1.5f);
         }
 
         if (collision.gameObject.tag == "Goal2")
         {
-            Invoke("Loadlvl3", 1.0f); 
+            Invoke("Loadlvl3", 1.5f); 
         }
 
         if (collision.gameObject.tag == "Goal4"){
 
-            Invoke("Loadlvl4", 1.0f);
+            Invoke("Loadlvl4", 1.5f);
         }
 
         if (collision.gameObject.tag == "Goal5"){
 
-            Invoke("Loadlvl6", 1.0f);
+            Invoke("Loadlvl6", 1.5f);
         }
 
         if (collision.gameObject.tag == "Goal6")
         {
-            Invoke("Loadlvl7", 1.0f);
+            Invoke("Loadlvl7", 1.5f);
         }
+        */
 
        if (collision.gameObject.tag.Equals ("Wall"))
         {
             Destroy(this.gameObject);
+            GameManager.CurrentLevel = 1; 
             
         }
         
     }
 
-    void LoadWinScene ()
+  /*  void LoadWinScene ()
     {
         SceneManager.LoadScene("Win Screen");
     }
@@ -106,6 +121,7 @@ public class Character_behavior : MonoBehaviour {
     {
         SceneManager.LoadScene("Level7");
     }
+    */
 }
 
 
