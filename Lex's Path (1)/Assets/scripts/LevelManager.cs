@@ -74,4 +74,9 @@ public class LevelManager: MonoBehaviour {
     {
         SceneManager.LoadScene("Level10");
     }
+
+    public void GotoMenu ()
+    {
+        SceneManager.LoadScene("Start Screen");
+    }
 }
