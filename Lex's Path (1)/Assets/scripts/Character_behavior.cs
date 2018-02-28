@@ -36,10 +36,10 @@ public class Character_behavior : MonoBehaviour {
 
         if (collision.gameObject.tag == "Goal")
         {
-            GameManager.CurrentLevel++;
-            Debug.Log("Current Level" + GameManager.CurrentLevel);
+            GameManager.Manager.CurrentLevel++;
+            Debug.Log("Current Level" + GameManager.Manager.CurrentLevel);
             Debug.Log("here");
-            SceneManager.LoadScene("Level" + GameManager.CurrentLevel);
+            SceneManager.LoadScene("Level" + GameManager.Manager.CurrentLevel);
             
         }
         /*if (collision.gameObject.tag == "Goal7")
@@ -82,7 +82,7 @@ public class Character_behavior : MonoBehaviour {
        if (collision.gameObject.tag.Equals ("Wall"))
         {
             Destroy(this.gameObject);
-            GameManager.CurrentLevel = 1; 
+            //GameManager.Manager.CurrentLevel = 1; 
             
         }
         

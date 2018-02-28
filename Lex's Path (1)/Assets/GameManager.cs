@@ -4,11 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    public static int CurrentLevel = 1; 
+    //singleton 
+    public static GameManager Manager; 
+
+    public int CurrentLevel = 1; 
   
 	// Use this for initialization
 	void Start () {
       
+        if (Manager == null)
+        {
+            Manager = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+
+        else
+        {
+            Destroy(this.gameObject);
+        }
 	}
 	
 	// Update is called once per frame
@@ -17,5 +30,7 @@ public class GameManager : MonoBehaviour {
 
             SceneManager.LoadScene("Load Screen");
         }
+
+        Debug.Log(CurrentLevel);
 	}
 }
