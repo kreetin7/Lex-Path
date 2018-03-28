@@ -6,13 +6,7 @@ TagManager:
   tags:
   - Wall
   - Goal
-  - Goal1
-  - Goal2
-  - Goal3
-  - Goal4
-  - Goal5
-  - Goal6
-  - Goal7
+  - PathPiece
   layers:
   - Default
   - TransparentFX

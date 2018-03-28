@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 212264197830169184}
   - component: {fileID: 61193932373982882}
   - component: {fileID: 50395490515715984}
+  - component: {fileID: 114177591522608332}
   m_Layer: 0
   m_Name: Destrory piece (6)
   m_TagString: Wall
@@ -64,14 +65,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107295691974908}
-  m_LocalRotation: {x: -0.0027709696, y: 0.0026600123, z: 0.7071014, w: 0.70710176}
-  m_LocalPosition: {x: -8.371011, y: 3.5082195, z: 0}
+  m_LocalRotation: {x: -0.0026179885, y: -0.00007845895, z: -0.00000020540534, w: 0.9999966}
+  m_LocalPosition: {x: -12.791407, y: 2.2836452, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4652958597717146}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.44000003, y: -0.009000001, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: -0.3, y: -0.009000001, z: 0}
 --- !u!50 &50395490515715984
 Rigidbody2D:
   serializedVersion: 4
@@ -117,6 +118,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8, y: 0.77}
   m_EdgeRadius: 0
+--- !u!114 &114177591522608332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107295691974908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e25a8f1811eab94b8a6af095c74ba44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212264197830169184
 SpriteRenderer:
   m_ObjectHideFlags: 1

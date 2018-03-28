@@ -3,21 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum CLIPS { Screaming, WallBump }
 public class Character_behavior : MonoBehaviour {
-  
+
+    public float LoadGameOverTimer = 1.5f;
+
+    private SpriteRenderer Sprite;
     float moveSpeed = 4.0f;
+
+    public Dictionary<CLIPS, AudioClip> AudioLibrary;
+    AudioSource audiosource;
+    AudioClip clipE;
+    AudioClip clipP;
     //public bool UnlockLevel2; 
-   
 
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         // UnlockLevel2 = false; 
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        Sprite = transform.Find("Witch Sprite").GetComponent<SpriteRenderer>();
+
+        AudioLibrary = new Dictionary<CLIPS, AudioClip>();
+        AudioLibrary.Add(CLIPS.Screaming, Resources.Load<AudioClip>("audio/cat-scream"));
+        AudioLibrary.Add(CLIPS.WallBump, Resources.Load<AudioClip>("audio/wood"));
+        audiosource = GetComponent<AudioSource>();
+        clipE = AudioLibrary[CLIPS.Screaming];
+        clipP = AudioLibrary[CLIPS.WallBump];
+    }
+
+    // Update is called once per frame
+    void Update () {
         this.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveSpeed * Input.GetAxis("Horizontal"), 0f), ForceMode2D.Impulse);
 
 
@@ -42,86 +58,33 @@ public class Character_behavior : MonoBehaviour {
             SceneManager.LoadScene("Level" + GameManager.Manager.CurrentLevel);
             
         }
-        /*if (collision.gameObject.tag == "Goal7")
-        {
-            Invoke("LoadWinScene", 1.5f);
-            
-                }
-        if (collision.gameObject.tag == "Goal3")
-        {
-            Invoke("Loadlvl4", 1.0f);
-        }
-
-        if (collision.gameObject.tag == "Goal1")
-        {
-           // Level2 = true; 
-            Invoke("LoadLvl2", 1.5f);
-        }
-
-        if (collision.gameObject.tag == "Goal2")
-        {
-            Invoke("Loadlvl3", 1.5f); 
-        }
-
-        if (collision.gameObject.tag == "Goal4"){
-
-            Invoke("Loadlvl4", 1.5f);
-        }
-
-        if (collision.gameObject.tag == "Goal5"){
-
-            Invoke("Loadlvl6", 1.5f);
-        }
-
-        if (collision.gameObject.tag == "Goal6")
-        {
-            Invoke("Loadlvl7", 1.5f);
-        }
-        */
+       
 
        if (collision.gameObject.tag.Equals ("Wall"))
         {
-            Destroy(this.gameObject);
-            //GameManager.Manager.CurrentLevel = 1; 
+            audiosource.PlayOneShot(AudioLibrary[CLIPS.Screaming]);
             
+            Invoke("GameOverPlz", LoadGameOverTimer);
+            Sprite.sortingOrder = 0; 
+            
+            
+        }
+
+       if (collision.gameObject.tag.Equals("PathPiece"))
+        {
+            audiosource.PlayOneShot(AudioLibrary[CLIPS.WallBump]);
         }
         
     }
 
-  /*  void LoadWinScene ()
+    public void GameOverPlz()
     {
-        SceneManager.LoadScene("Win Screen");
+        SceneManager.LoadScene("Game Over");
+        Debug.Log("Shit");
     }
+    
 
-    void LoadLvl2 ()
-    {
-        SceneManager.LoadScene("Level2");
-    }
-
-    void Loadlvl3()
-    {
-        SceneManager.LoadScene("Level3");
-    }
-
-    void Loadlvl4()
-    {
-        SceneManager.LoadScene("Level4");
-    }
-    void Loadlvl5()
-    {
-        SceneManager.LoadScene("Level5");
-    }
-
-    void Loadlvl6()
-    {
-        SceneManager.LoadScene("Level6");
-    }
-
-    void Loadlvl7()
-    {
-        SceneManager.LoadScene("Level7");
-    }
-    */
+ 
 }
 
 

@@ -33,7 +33,7 @@ public class Normal_Piece_Behavior : MonoBehaviour
     }
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -52,12 +52,9 @@ public class Normal_Piece_Behavior : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Wall"))
-        {
-            Destroy(this.gameObject);
-        }
+      
     }
 
 
