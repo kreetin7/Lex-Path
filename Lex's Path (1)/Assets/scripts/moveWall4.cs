@@ -24,12 +24,12 @@ public class moveWall4 : MonoBehaviour {
             if (xtarget <= 0)
             {
                 xtarget = xMax;
-
+                transform.localScale = new Vector3(1, 1, 1);
             }
             else
             {
                 xtarget = xMin;
-
+                transform.localScale = new Vector3(1, 1, 1);
             }
         }
 

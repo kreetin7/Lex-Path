@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum CLIPS { Screaming, WallBump }
+public enum CLIPS { Screaming, WallBump, Doorbell, Bouncy }
 public class Character_behavior : MonoBehaviour {
 
     public float LoadGameOverTimer = 1.5f;
@@ -15,6 +15,8 @@ public class Character_behavior : MonoBehaviour {
     AudioSource audiosource;
     AudioClip clipE;
     AudioClip clipP;
+    AudioClip clipD;
+    AudioClip clipB; 
     //public bool UnlockLevel2; 
 
 
@@ -27,9 +29,12 @@ public class Character_behavior : MonoBehaviour {
         AudioLibrary = new Dictionary<CLIPS, AudioClip>();
         AudioLibrary.Add(CLIPS.Screaming, Resources.Load<AudioClip>("audio/cat-scream"));
         AudioLibrary.Add(CLIPS.WallBump, Resources.Load<AudioClip>("audio/wood"));
+        AudioLibrary.Add(CLIPS.Doorbell, Resources.Load<AudioClip>("audio/doorbell"));
+        AudioLibrary.Add(CLIPS.Bouncy, Resources.Load<AudioClip>("audio/slime"));
         audiosource = GetComponent<AudioSource>();
         clipE = AudioLibrary[CLIPS.Screaming];
         clipP = AudioLibrary[CLIPS.WallBump];
+        clipD = AudioLibrary[CLIPS.Doorbell]; 
     }
 
     // Update is called once per frame
@@ -56,14 +61,15 @@ public class Character_behavior : MonoBehaviour {
             Debug.Log("Current Level" + GameManager.Manager.CurrentLevel);
             Debug.Log("here");
             SceneManager.LoadScene("Level" + GameManager.Manager.CurrentLevel);
-            
+            audiosource.PlayOneShot(AudioLibrary[CLIPS.Doorbell]);
         }
        
 
        if (collision.gameObject.tag.Equals ("Wall"))
         {
             audiosource.PlayOneShot(AudioLibrary[CLIPS.Screaming]);
-            
+
+            collision.gameObject.GetComponent<Wall_Behavior>().SetScared(true);
             Invoke("GameOverPlz", LoadGameOverTimer);
             Sprite.sortingOrder = 0; 
             
@@ -72,7 +78,12 @@ public class Character_behavior : MonoBehaviour {
 
        if (collision.gameObject.tag.Equals("PathPiece"))
         {
-            audiosource.PlayOneShot(AudioLibrary[CLIPS.WallBump]);
+            audiosource.PlayOneShot(AudioLibrary[CLIPS.WallBump]); 
+        }
+
+       if (collision.gameObject.tag.Equals("BouncyPiece"))
+        {
+            audiosource.PlayOneShot(AudioLibrary[CLIPS.Bouncy]);
         }
         
     }

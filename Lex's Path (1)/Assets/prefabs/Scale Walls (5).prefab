@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114257340949001496}
   - component: {fileID: 58727662257787708}
   - component: {fileID: 114852537113749068}
+  - component: {fileID: 95651772655498516}
   m_Layer: 0
   m_Name: Scale Walls (5)
   m_TagString: Wall
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477902946813626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.1122665, y: -4.4702992, z: 0}
+  m_LocalPosition: {x: 9.201395, y: -1.8733656, z: 0}
   m_LocalScale: {x: 1.0320812, y: 1.0320812, z: 1.0320812}
   m_Children:
   - {fileID: 4971717739857262}
@@ -85,9 +86,26 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.07, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.47
+--- !u!95 &95651772655498516
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477902946813626}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aec621d33b181144db04b7e3f4c343f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114257340949001496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e25a8f1811eab94b8a6af095c74ba44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scared: 0
 --- !u!212 &212012277399827900
 SpriteRenderer:
   m_ObjectHideFlags: 1

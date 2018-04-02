@@ -759,6 +759,10 @@ Prefab:
       propertyPath: xMax
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1302242050126754, guid: 23846e025ff1b2d4a8e6eb98de7a5d03, type: 2}
+      propertyPath: m_TagString
+      value: PathPiece
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23846e025ff1b2d4a8e6eb98de7a5d03, type: 2}
   m_IsPrefabParent: 0

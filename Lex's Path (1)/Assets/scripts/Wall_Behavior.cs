@@ -6,15 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class Wall_Behavior : MonoBehaviour {
 
-   
-
+    [SerializeField] private bool scared;
+    private Animator anim;
     // Use this for initialization
     void Start () {
-        
+        anim = GetComponentInChildren<Animator>();
+        scared = false;
+        SetScared(scared);
     }
 	
-	// Update is called once per frame
-	void Update () {
+
+    public void SetScared(bool b)
+    {
+        scared = b;
+        anim.SetBool("Scared", scared);
+
+    }
+
+    // Update is called once per frame
+    void Update () {
                 /*  if (GameObject.FindWithTag ("Player") == null)
           {
               SceneManager.LoadScene("Game Over");
@@ -25,7 +35,7 @@ public class Wall_Behavior : MonoBehaviour {
 
      void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        scared = true; 
     }
 
 

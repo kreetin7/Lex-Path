@@ -8,18 +8,20 @@ public class moveWall : MonoBehaviour {
     public float xMax;
     float xtarget;
 
-    float speed = 3f; 
+    float speed = 3f;
 
-
+    private SpriteRenderer sprite; 
 
 	// Use this for initialization
 	void Start () {
-        
-	}
+        sprite = transform.Find("Cat").GetComponent<SpriteRenderer>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
        
+        
 
         if (Vector2.Distance(transform.position, new Vector2(xtarget, transform.position.y)) <= 0.01f)
         {
@@ -28,15 +30,16 @@ public class moveWall : MonoBehaviour {
                 if (xtarget <= -4.5)
                 {
                     xtarget = xMax;
-
+                transform.localScale = new Vector3(1, 1, 1); 
                 }
                 else
                 {
                     xtarget = xMin;
-
+                transform.localScale = new Vector3(-1, 1, 1);
                 }
             }
 
+         
           
         
 
