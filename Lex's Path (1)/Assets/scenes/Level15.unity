@@ -214,6 +214,28 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3352e6a1e43a4a04c8408e0fd0d283b1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &292477233 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1097353264839706, guid: 994a1b621fc9c8b4ba709c40f3d30946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1683340370}
+--- !u!95 &292477236
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292477233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4807f33a3a10f6459d9e54e929e584c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &400999479
 Prefab:
   m_ObjectHideFlags: 0
@@ -936,7 +958,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e1a0a1755647fa2428ee076584a66915, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 587664f738bee754a9e1b4151a5251bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1039,6 +1061,33 @@ Prefab:
     - target: {fileID: 1064921601146452, guid: 994a1b621fc9c8b4ba709c40f3d30946, type: 2}
       propertyPath: m_Name
       value: Destrory piece (move) (center)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148030433799698, guid: 994a1b621fc9c8b4ba709c40f3d30946,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0973bc221a968c428f6533df648c64b,
+        type: 3}
+    - target: {fileID: 4045127846479034, guid: 994a1b621fc9c8b4ba709c40f3d30946, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045127846479034, guid: 994a1b621fc9c8b4ba709c40f3d30946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045127846479034, guid: 994a1b621fc9c8b4ba709c40f3d30946, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045127846479034, guid: 994a1b621fc9c8b4ba709c40f3d30946, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 61665633888717574, guid: 994a1b621fc9c8b4ba709c40f3d30946,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 994a1b621fc9c8b4ba709c40f3d30946, type: 2}
@@ -1190,6 +1239,29 @@ Prefab:
       propertyPath: m_Name
       value: 'Normal Piece (move left) '
       objectReference: {fileID: 0}
+    - target: {fileID: 212247579606760924, guid: 23846e025ff1b2d4a8e6eb98de7a5d03,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2106540125b942343b5693f900a7f543,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23846e025ff1b2d4a8e6eb98de7a5d03, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2007756198 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1064921601146452, guid: 994a1b621fc9c8b4ba709c40f3d30946,
+    type: 2}
+  m_PrefabInternal: {fileID: 1683340370}
+--- !u!114 &2007756204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007756198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e25a8f1811eab94b8a6af095c74ba44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scared: 0

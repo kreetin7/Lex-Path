@@ -14,7 +14,7 @@ public class moveWall : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        sprite = transform.Find("Cat").GetComponent<SpriteRenderer>();
+
 
     }
 	

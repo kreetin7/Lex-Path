@@ -25,12 +25,12 @@ public class moveWall3 : MonoBehaviour {
             if (ytarget <= 2)
             {
                 ytarget = yMax;
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(-1, 1, 1);
             }
             else
             {
                 ytarget = yMin;
-                transform.localScale = new Vector3(1, -1, 1);
+                transform.localScale = new Vector3(1, 1, 1);
             }
 
 

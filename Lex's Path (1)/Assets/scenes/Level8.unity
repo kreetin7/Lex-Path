@@ -445,7 +445,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: e1a0a1755647fa2428ee076584a66915, type: 3}
+  m_Texture: {fileID: 2800000, guid: 587664f738bee754a9e1b4151a5251bc, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -757,16 +757,6 @@ Prefab:
     - target: {fileID: 4054254690449084, guid: 1a41a2b992aba74419487eac64daf481, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114035440244533886, guid: 1a41a2b992aba74419487eac64daf481,
-        type: 2}
-      propertyPath: yMin
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114035440244533886, guid: 1a41a2b992aba74419487eac64daf481,
-        type: 2}
-      propertyPath: yMax
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a41a2b992aba74419487eac64daf481, type: 2}
