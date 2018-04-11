@@ -15,7 +15,10 @@ public class LevelManager: MonoBehaviour {
 		
 	}
 
-   
+    public void GotoWin()
+    {
+        SceneManager.LoadScene("Win Screen");
+    }
 
     public void GotoLevelSelect()
     {

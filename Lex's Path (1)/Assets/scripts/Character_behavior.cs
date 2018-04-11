@@ -17,13 +17,13 @@ public class Character_behavior : MonoBehaviour {
     AudioClip clipP;
     AudioClip clipD;
     AudioClip clipB; 
-    //public bool UnlockLevel2; 
+
 
 
 
     // Use this for initialization
     void Start () {
-        // UnlockLevel2 = false; 
+   
         Sprite = transform.Find("Witch Sprite").GetComponent<SpriteRenderer>();
 
         AudioLibrary = new Dictionary<CLIPS, AudioClip>();
@@ -64,6 +64,10 @@ public class Character_behavior : MonoBehaviour {
             audiosource.PlayOneShot(AudioLibrary[CLIPS.Doorbell]);
         }
        
+        if (collision.gameObject.tag == "GoalFinal")
+        {
+            SceneManager.LoadScene("Win Screen");
+        }
 
        if (collision.gameObject.tag.Equals ("Wall"))
         {
@@ -85,6 +89,8 @@ public class Character_behavior : MonoBehaviour {
         {
             audiosource.PlayOneShot(AudioLibrary[CLIPS.Bouncy]);
         }
+
+       
         
     }
 
