@@ -848,7 +848,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 403220468}
-        m_MethodName: GotoLevel1
+        m_MethodName: GotoTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

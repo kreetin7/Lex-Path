@@ -15,6 +15,23 @@ public class LevelManager: MonoBehaviour {
 		
 	}
 
+    public void GotoTutorial()
+    {
+        SceneManager.LoadScene("tutorial1");
+        GameManager.Manager.CurrentLevel = 1;
+    }
+
+    public void Tutorial2()
+    {
+        SceneManager.LoadScene("tutorial2");
+        GameManager.Manager.CurrentLevel = 2;
+    }
+
+    public void Tutorial3()
+    {
+        SceneManager.LoadScene("tutorial3");
+        GameManager.Manager.CurrentLevel = 3;
+    }
     public void GotoWin()
     {
         SceneManager.LoadScene("Win Screen");
@@ -33,91 +50,91 @@ public class LevelManager: MonoBehaviour {
     public void GotoLevel1()
     {
         SceneManager.LoadScene("Level1");
-        GameManager.Manager.CurrentLevel = 1; 
+        GameManager.Manager.CurrentLevel = 4; 
     }
 
     public void GotoLevel2()
     {
             SceneManager.LoadScene("Level2");
-        GameManager.Manager.CurrentLevel = 2; 
+        GameManager.Manager.CurrentLevel = 5; 
     }
 
     public void GotoLevel3()
     {
         SceneManager.LoadScene("Level3");
-        GameManager.Manager.CurrentLevel = 3; 
+        GameManager.Manager.CurrentLevel = 6; 
     }
 
     public void GotoLevel4()
     {
         SceneManager.LoadScene("Level4");
-        GameManager.Manager.CurrentLevel = 4; 
+        GameManager.Manager.CurrentLevel = 7; 
     }
 
     public void GotoLevel5()
     {
         SceneManager.LoadScene("Level5");
-        GameManager.Manager.CurrentLevel= 5; 
+        GameManager.Manager.CurrentLevel= 8; 
     }
 
     public void GotoLevel6()
     {
         SceneManager.LoadScene("Level6");
-        GameManager.Manager.CurrentLevel = 6; 
+        GameManager.Manager.CurrentLevel = 9; 
     }
 
     public void GotoLevel7()
     {
         SceneManager.LoadScene("Level7");
-        GameManager.Manager.CurrentLevel = 7; 
+        GameManager.Manager.CurrentLevel = 10; 
     }
 
     public void GotoLevel8()
     {
         SceneManager.LoadScene("Level8");
-        GameManager.Manager.CurrentLevel = 8; 
+        GameManager.Manager.CurrentLevel = 11; 
     }
 
     public void GotoLevel9 ()
     {
         SceneManager.LoadScene("Level9");
-        GameManager.Manager.CurrentLevel = 9; 
+        GameManager.Manager.CurrentLevel = 12; 
     }
 
     public void GotoLevel10 ()
     {
         SceneManager.LoadScene("Level10");
-        GameManager.Manager.CurrentLevel = 10; 
+        GameManager.Manager.CurrentLevel = 13; 
     }
 
     public void GotoLevel11()
     {
         SceneManager.LoadScene("Level11");
-        GameManager.Manager.CurrentLevel = 11; 
+        GameManager.Manager.CurrentLevel = 14; 
     }
 
     public void GotoLevel12()
     {
         SceneManager.LoadScene("Level12");
-        GameManager.Manager.CurrentLevel = 12; 
+        GameManager.Manager.CurrentLevel = 15; 
     }
 
     public void GotoLevel13 ()
     {
         SceneManager.LoadScene("Level13");
-        GameManager.Manager.CurrentLevel = 13; 
+        GameManager.Manager.CurrentLevel = 16; 
     }
 
     public void GotoLevel14 ()
     {
         SceneManager.LoadScene("Level14");
-        GameManager.Manager.CurrentLevel = 14; 
+        GameManager.Manager.CurrentLevel = 17; 
     }
 
     public void GotoLevel15 ()
     {
         SceneManager.LoadScene("Level15");
-        GameManager.Manager.CurrentLevel = 15; 
+        GameManager.Manager.CurrentLevel = 18; 
     }
 
     public void GotoMenu ()

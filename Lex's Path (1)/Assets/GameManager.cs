@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     //singleton 
-    public static GameManager Manager; 
+    public static GameManager Manager;
+
+    public bool tutorialDone; 
 
     public int CurrentLevel = 1; 
   
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+
+        tutorialDone = false; 
 	}
 	
 	// Update is called once per frame

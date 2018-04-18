@@ -25,12 +25,7 @@ public class Wall_Behavior : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-                /*  if (GameObject.FindWithTag ("Player") == null)
-          {
-              SceneManager.LoadScene("Game Over");
-              Debug.Log("dead");
-          }
-          */
+                
     }
 
      void OnCollisionEnter2D(Collision2D collision)

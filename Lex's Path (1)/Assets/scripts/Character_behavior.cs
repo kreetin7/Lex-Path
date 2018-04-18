@@ -8,6 +8,8 @@ public class Character_behavior : MonoBehaviour {
 
     public float LoadGameOverTimer = 1.5f;
 
+    Collider2D collide; 
+
     private SpriteRenderer Sprite;
     float moveSpeed = 4.0f;
 
@@ -23,7 +25,8 @@ public class Character_behavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-   
+
+        collide = GetComponent<Collider2D>();
         Sprite = transform.Find("Witch Sprite").GetComponent<SpriteRenderer>();
 
         AudioLibrary = new Dictionary<CLIPS, AudioClip>();
@@ -55,19 +58,41 @@ public class Character_behavior : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
 
+       
+
         if (collision.gameObject.tag == "Goal")
         {
             GameManager.Manager.CurrentLevel++;
             Debug.Log("Current Level" + GameManager.Manager.CurrentLevel);
             Debug.Log("here");
-            SceneManager.LoadScene("Level" + GameManager.Manager.CurrentLevel);
+            if (SceneManager.GetActiveScene().name == "tutorial3")
+            {
+                GameManager.Manager.tutorialDone = true;
+                GameManager.Manager.CurrentLevel = 1;
+            }
+            if (GameManager.Manager.tutorialDone == false)
+            {
+               
+                SceneManager.LoadScene("tutorial" + GameManager.Manager.CurrentLevel);
+
+            }
+
+
+            else
+            {
+                
+                SceneManager.LoadScene("Level" + GameManager.Manager.CurrentLevel);
+            }
             audiosource.PlayOneShot(AudioLibrary[CLIPS.Doorbell]);
         }
        
         if (collision.gameObject.tag == "GoalFinal")
         {
             SceneManager.LoadScene("Win Screen");
+            audiosource.PlayOneShot(AudioLibrary[CLIPS.Doorbell]);
         }
+
+     
 
        if (collision.gameObject.tag.Equals ("Wall"))
         {
@@ -75,8 +100,12 @@ public class Character_behavior : MonoBehaviour {
 
             collision.gameObject.GetComponent<Wall_Behavior>().SetScared(true);
             Invoke("GameOverPlz", LoadGameOverTimer);
-            Sprite.sortingOrder = 0; 
-            
+            Sprite.sortingOrder = 0;
+            collide.enabled = !collide.enabled;
+
+            Screen_Shake.shakeTimer = 0.7f;
+            Screen_Shake.shakeScreen = true;
+            Screen_Shake.playOnce = true;
             
         }
 
