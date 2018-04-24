@@ -8,6 +8,9 @@ public class Character_behavior : MonoBehaviour {
 
     public float LoadGameOverTimer = 1.5f;
 
+    public bool magic;
+     public Animator anim2; 
+
     Collider2D collide; 
 
     private SpriteRenderer Sprite;
@@ -18,13 +21,20 @@ public class Character_behavior : MonoBehaviour {
     AudioClip clipE;
     AudioClip clipP;
     AudioClip clipD;
-    AudioClip clipB; 
+    AudioClip clipB;
 
 
-
+     void OnMouseDown()
+    {
+        magic = true; 
+    }
 
     // Use this for initialization
     void Start () {
+
+        anim2 = GetComponentInChildren<Animator>();
+        magic = false;
+        SetMagic(magic);
 
         collide = GetComponent<Collider2D>();
         Sprite = transform.Find("Witch Sprite").GetComponent<SpriteRenderer>();
@@ -53,6 +63,12 @@ public class Character_behavior : MonoBehaviour {
         }
 
         
+    }
+
+    public void SetMagic(bool m)
+    {
+        magic = m;
+        anim2.SetBool("magic", magic); 
     }
 
     void OnCollisionEnter2D(Collision2D collision)

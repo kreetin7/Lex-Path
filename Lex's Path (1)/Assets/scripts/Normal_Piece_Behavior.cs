@@ -6,25 +6,22 @@ using UnityEngine.SceneManagement;
 public class Normal_Piece_Behavior : MonoBehaviour
 {
 
-
+    
    
     // Use this for initialization
     bool dragging = false;
     float distance;
 
-    void OnMouseEnter()
-    {
+    public GameObject particles;
 
-    }
+   
 
-    void OnMouseExit()
-    {
-
-    }
+  
     void OnMouseDown()
     {
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         dragging = true;
+        //Character_behavior.Animator.magic = true;
     }
 
     void OnMouseUp()
@@ -34,6 +31,9 @@ public class Normal_Piece_Behavior : MonoBehaviour
     void Start()
     {
         
+        particles = transform.GetChild(1).gameObject;
+        particles.SetActive (false);
+
     }
 
     // Update is called once per frame
@@ -48,8 +48,13 @@ public class Normal_Piece_Behavior : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = rayPoint;
-        }
+            particles.SetActive(true);
 
+        }
+        else
+        {
+            particles.SetActive(false);
+        }
     }
 
      void OnCollisionEnter2D(Collision2D collision)

@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4530676456482174}
   - component: {fileID: 212934403071418482}
   - component: {fileID: 61140090060802920}
+  - component: {fileID: 114589217430324360}
   m_Layer: 0
   m_Name: Start spot (2)
   m_TagString: Goal
@@ -64,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1490907350971496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0248098, y: -1.0779502, z: -0.09}
+  m_LocalPosition: {x: 10.772719, y: -2.8296268, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4281104527980300}
@@ -96,6 +97,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.76, y: 0.66}
   m_EdgeRadius: 0
+--- !u!114 &114589217430324360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490907350971496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d5df9d4fab209459eb45c7d9f67dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CloudMoveSpeed: 0.1
+  moveThreshold: 0.1
 --- !u!212 &212451517992374520
 SpriteRenderer:
   m_ObjectHideFlags: 1

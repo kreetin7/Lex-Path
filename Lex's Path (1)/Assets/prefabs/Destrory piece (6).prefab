@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 61193932373982882}
   - component: {fileID: 50395490515715984}
   - component: {fileID: 114177591522608332}
+  - component: {fileID: 114985779564752340}
   m_Layer: 0
   m_Name: Destrory piece (6)
   m_TagString: Wall
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017251576298634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.55, y: -2.220446e-16, z: 1.43060685e-11}
   m_LocalScale: {x: 0.71, y: 0.64, z: 1}
   m_Children: []
   m_Father: {fileID: 4794571421676146}
@@ -66,14 +67,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107295691974908}
-  m_LocalRotation: {x: -0.0026179885, y: -0.00007845895, z: -0.00000020540534, w: 0.9999966}
-  m_LocalPosition: {x: -12.791407, y: 2.2836452, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.55, y: -0.01, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4652958597717146}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.3, y: -0.009000001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!50 &50395490515715984
 Rigidbody2D:
   serializedVersion: 4
@@ -148,6 +149,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scared: 1
+--- !u!114 &114985779564752340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107295691974908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d5df9d4fab209459eb45c7d9f67dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteHorizontal: 0
+  CloudDown: 0
+  CloudMoveSpeed: 0.1
+  moveThreshold: 0.1
 --- !u!212 &212264197830169184
 SpriteRenderer:
   m_ObjectHideFlags: 1

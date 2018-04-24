@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4057945554320444}
   - component: {fileID: 212527718446594916}
+  - component: {fileID: 95768195781174130}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -38,6 +39,7 @@ GameObject:
   - component: {fileID: 212479831820132696}
   - component: {fileID: 61105983521701632}
   - component: {fileID: 82321787063580356}
+  - component: {fileID: 114815397216827048}
   m_Layer: 0
   m_Name: Start spot (2) 1
   m_TagString: Respawn
@@ -65,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809085343180432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.02647, y: 4.4543724, z: -0.09}
+  m_LocalPosition: {x: -8.12, y: 4.65, z: -0.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4057945554320444}
@@ -108,7 +110,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b15aad4ae7e3d334eb70763d1f7e5c7e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.095
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -177,6 +179,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95768195781174130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259796573041818}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42b1ade446e23854b9583595f0cba8bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114815397216827048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809085343180432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d5df9d4fab209459eb45c7d9f67dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteHorizontal: 0
+  CloudDown: 0
+  CloudMoveSpeed: 0.1
+  moveThreshold: 0.1
 --- !u!212 &212479831820132696
 SpriteRenderer:
   m_ObjectHideFlags: 1

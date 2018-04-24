@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4018537064976476}
   - component: {fileID: 212435627484453058}
+  - component: {fileID: 95896181954111680}
   m_Layer: 0
   m_Name: Witch Sprite
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565800399319194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0187864, y: 0.780733, z: 0.58}
+  m_LocalPosition: {x: -9.68, y: 5.46, z: 0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4018537064976476}
@@ -270,6 +271,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95896181954111680
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915108980393774}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f78f460ea23ebaf4d8b8e841c53ef7b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114562407651969288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadGameOverTimer: 1.5
+  magic: 0
+  anim2: {fileID: 0}
 --- !u!212 &212435627484453058
 SpriteRenderer:
   m_ObjectHideFlags: 1
