@@ -7,7 +7,7 @@ public class Normal_Piece_Behavior : MonoBehaviour
 {
 
     
-   
+    
     // Use this for initialization
     bool dragging = false;
     float distance;

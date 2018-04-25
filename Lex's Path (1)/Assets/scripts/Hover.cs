@@ -23,6 +23,11 @@ public class Hover : MonoBehaviour {
         {
             Cursor.SetCursor(hoverTexture, hotspot, curMode);
         }
+
+        if (gameObject.tag == "BouncyPiece")
+        {
+            Cursor.SetCursor(hoverTexture, hotspot, curMode);
+        }
     }
     void OnMouseExit()
     {

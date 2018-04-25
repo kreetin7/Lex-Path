@@ -135,6 +135,11 @@ public class Character_behavior : MonoBehaviour {
             audiosource.PlayOneShot(AudioLibrary[CLIPS.Bouncy]);
         }
 
+       if (collision.gameObject.tag.Equals("Respawn"))
+        {
+
+        }
+
        
         
     }

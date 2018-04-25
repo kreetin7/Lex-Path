@@ -144,6 +144,14 @@ public class LevelManager: MonoBehaviour {
 
     public void GoToCurrentLevel()
     {
-        SceneManager.LoadScene(GameManager.Manager.CurrentLevel);
+        if (GameManager.Manager.tutorialDone == true)
+        {
+            SceneManager.LoadScene("Level" + GameManager.Manager.CurrentLevel);
+        }
+       
+        if (GameManager.Manager.tutorialDone == false)
+        {
+            SceneManager.LoadScene("tutorial" + GameManager.Manager.CurrentLevel);
+        }
     }
 }
